@@ -1,0 +1,40 @@
+
+This wiki contains basic steps and configuration which should be done before run our C coverage example project with googletest integration in Linux (the example command can be executed in Ubuntu/Linux Mint)
+
+Requirements:
+* Python v2.3 or newer (installed by default on modern Ubuntu)
+* CMake v2.6.4 or newer (sudo apt-get install cmake)
+* Gcovr (sudo apt install gcovr)
+* Compiled and linked google test project (Here is a good example: http://stackoverflow.com/a/13513907)
+
+Step by step install of google test:
+* get the framework
+* unpack and build
+* install headers
+* update linker cache
+
+Commands:
+{{{
+$ wget https://github.com/google/googletest/archive/release-1.7.0.tar.gz
+$ tar xf release-1.7.0.tar.gz
+$ cd googletest-release-1.7.0
+$ cmake -DBUILD_SHARED_LIBS=ON .
+$ make
+$ sudo cp -a include/gtest /usr/include
+$ sudo cp -a libgtest_main.so libgtest.so /usr/lib/
+$ sudo ldconfig -v | grep gtes
+}}}
+
+
+__Makefiles should be updated before execution:__
+
+/Debug/makefile - the gtest path should be replaced at this line:
+{{{
+g++ -L/home/abanfi/googletest-release-1.7.0 -o"coverage" $(OBJS) $(USER_OBJS) $(LIBS)
+}}}
+
+/Debug/subdir.mk and /Debug/samples/subdir.mk - the gtest include path should be replaced at this line:
+{{{
+g++ -I/home/abanfi/googletest-release-1.7.0/include -O0 -g3 -Wall -c -fmessage-length=0 -fprofile-arcs -ftest-coverage -MMD -MP -MF"$(@:%.o=%.d)" 
+}}}
+

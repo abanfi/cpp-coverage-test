@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="17" failures="0" disabled="0" errors="0" timestamp="2016-08-13T11:38:06" time="0.001" name="AllTests">
+  <testsuite name="FactorialTest" tests="3" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="Negative" status="run" time="0" classname="FactorialTest" />
+    <testcase name="Zero" status="run" time="0" classname="FactorialTest" />
+    <testcase name="Positive" status="run" time="0" classname="FactorialTest" />
+  </testsuite>
+  <testsuite name="IsPrimeTest" tests="3" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="Negative" status="run" time="0" classname="IsPrimeTest" />
+    <testcase name="Trivial" status="run" time="0" classname="IsPrimeTest" />
+    <testcase name="Positive" status="run" time="0" classname="IsPrimeTest" />
+  </testsuite>
+  <testsuite name="MyString" tests="4" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="DefaultConstructor" status="run" time="0" classname="MyString" />
+    <testcase name="ConstructorFromCString" status="run" time="0" classname="MyString" />
+    <testcase name="CopyConstructor" status="run" time="0" classname="MyString" />
+    <testcase name="Set" status="run" time="0" classname="MyString" />
+  </testsuite>
+  <testsuite name="QueueTest" tests="3" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="DefaultConstructor" status="run" time="0" classname="QueueTest" />
+    <testcase name="Dequeue" status="run" time="0" classname="QueueTest" />
+    <testcase name="Map" status="run" time="0" classname="QueueTest" />
+  </testsuite>
+  <testsuite name="Counter" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="Increment" status="run" time="0" classname="Counter" />
+  </testsuite>
+  <testsuite name="ProgressStateTest" tests="3" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="zeroValueOfValidTargetIsZeroPercent" status="run" time="0" classname="ProgressStateTest" />
+    <testcase name="negativeValueOfValidTargetIsZeroPercent" status="run" time="0" classname="ProgressStateTest" />
+    <testcase name="valueEqualTargetIsHundredPercent" status="run" time="0" classname="ProgressStateTest" />
+  </testsuite>
+</testsuites>
